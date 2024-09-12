@@ -1,0 +1,3 @@
+Dataset: mnist
+Batch size: 32
+Learning rate: 0.001
