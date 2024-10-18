@@ -67,6 +67,7 @@ TM -> OC : Measure IPA and TL
 MC -> User : Return Results (IPA, TL, Final Metrics)
 @enduml
 
+```
 
 ## 2. Model Selection
 
@@ -86,6 +87,7 @@ class ModelLoader:
             return self.load_densenet_model()
         else:
             raise ValueError("Invalid model type")
+```
 
 ## 3. Dataset Handling
 
@@ -102,6 +104,7 @@ class DatasetLoader:
             return self.load_cifar10(batch_size)
         else:
             raise ValueError("Invalid dataset")
+```
 
 
 ## 4. Pruning Strategies
@@ -126,6 +129,7 @@ class PruningHandler:
             self.unstructured_pruning(model, percentage)
         else:
             raise ValueError("Invalid pruning type")
+```
 
 
 ## 5. Performance Metrics and Evaluation
@@ -145,6 +149,7 @@ class OpCounter:
     def calculate_flops(self, model, data_loader):
         # Calculate floating-point operations (FLOPs)
         pass
+```
 
 
 ## 6. Re-runs and Replication
@@ -159,3 +164,4 @@ class ExperimentController:
         self.pruning_handler.apply_pruning(model, pruning_type, pruning_percentage)
         metrics = self.training_manager.train(model, dataset)
         return metrics
+```
